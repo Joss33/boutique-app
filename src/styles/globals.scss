@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./../../public/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./../../public/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'VensfolkRegular';
+  src: url('./../../public/fonts/VensfolkRegular.ttf');
+}
+
+html, body{
+  font-family: 'Montserrat-Regular';
+}
+
+strong, .font-bold{
+  font-family: 'Montserrat-Bold';
+}
+
+.text-VensfolkRegular{
+  font-family: 'VensfolkRegular';
+}

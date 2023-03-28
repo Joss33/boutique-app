@@ -7,9 +7,13 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <Header/>
-        <Main />
-        <Footer/>
+        <div className="flex flex-col h-full">
+          <Header/>
+          <div className="flex flex-col grow overflow-auto h-full">
+            <Main />
+            <Footer/>
+          </div>
+        </div>
         <NextScript />
       </body>
     </Html>

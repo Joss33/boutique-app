@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +11,49 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main className='h-full'>
+        <h2 className='text-VensfolkRegular text-center text-xl mb-3'>
+          ¡Lo que tenemos para ti!
+        </h2>
+        <a href="#" className='text-center block underline text-shirly-primary mb-8'>Ver todo</a>
+
+        <h4 className='text-base text-center text-VensfolkRegular mb-3'>
+          Llévate nuestros accesorios con
+        </h4>
+
+        <h3 className='text-3xl text-center text-VensfolkRegular mb-5'>
+          10% de descuento
+        </h3>
+
+        <h3 className='text-lg text-center text-VensfolkRegular mb-3'>Comparte tus looks con #saboutique</h3>
+        <p className="text-sm text-center mb-8">
+          Etiqueta en instagram @sa.storemedellin y en tu caption con #saboutique para tener la oportunidad de aparecer.
+        </p>
+
+        <div className="overflow-hidden mb-3">
+          <div className="flex items-center gap-4 pl-5 mb-12 overflow-auto">
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+            </div>
+          </div>
+        </div>
+
+      </main>
     </>
   )
 }

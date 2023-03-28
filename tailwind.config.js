@@ -9,7 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...colors
+        ...colors,
+        shirly:{
+          'primary': '#E66464',
+          'accent': '#EF9C9C',
+          'accent-gray': '#FFE3E2',
+          'accent-gray-02': '#FFF7F6',
+        }
       }
     },
   },

@@ -12,7 +12,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='h-full'>
-        <h2 className='text-VensfolkRegular text-center text-xl mb-3'>
+
+      <div className="overflow-hidden mb-9 mt-4">
+        <div className="flex lg:justify-center items-center gap-4 pl-5 overflow-auto">
+          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
+            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
+            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
+              Blusas
+            </div>
+          </a>
+          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
+            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
+            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
+              Pantalones
+            </div>
+          </a>
+          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
+            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
+            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
+              Vestidos
+            </div>
+          </a>
+          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
+            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
+            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
+              Accesorios
+            </div>
+          </a>
+        </div>
+      </div>
+
+        <h2 className='text-VensfolkRegular text-center text-xl lg:text-3xl mb-3'>
           ¡Lo que tenemos para ti!
         </h2>
         <a href="#" className='text-center block underline text-shirly-primary mb-8'>Ver todo</a>
@@ -31,7 +61,7 @@ export default function Home() {
         </p>
 
         <div className="overflow-hidden mb-3">
-          <div className="flex items-center gap-4 pl-5 mb-12 overflow-auto">
+          <div className="flex lg:justify-center items-center gap-4 pl-5 mb-12 overflow-auto">
             <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
               <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
             </div>

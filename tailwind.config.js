@@ -15,6 +15,7 @@ module.exports = {
           'accent': '#EF9C9C',
           'accent-gray': '#FFE3E2',
           'accent-gray-02': '#FFF7F6',
+          'pink-01': '#E2557F',
         }
       }
     },

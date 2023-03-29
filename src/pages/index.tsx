@@ -1,8 +1,41 @@
 import Head from 'next/head';
-
 import Image from "next/image";
 
+//models
+import { Category } from '@/models/category.model';
+
+//components
+import CardCategory from "@/components/home/CardCategory";
+
 export default function Home() {
+
+  const categories: Category[] = [
+    {
+      id: '1',
+      name: 'Blusas',
+      image: '/images/MASCARA-1@2x.png',
+      link: '#'
+    },
+    {
+      id: '2',
+      name: 'Pantalones',
+      image: '/images/MASCARA-1@2x.png',
+      link: '#'
+    },
+    {
+      id: '3',
+      name: 'Vestidos',
+      image: '/images/MASCARA-1@2x.png',
+      link: '#'
+    },
+    {
+      id: '4',
+      name: 'Accesorios',
+      image: '/images/MASCARA-1@2x.png',
+      link: '#'
+    },
+  ]
+
   return (
     <>
       <Head>
@@ -15,48 +48,26 @@ export default function Home() {
 
       <div className="overflow-hidden mb-9 mt-4">
         <div className="flex lg:justify-center items-center gap-4 pl-5 overflow-auto">
-          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
-            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
-            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
-              Blusas
-            </div>
-          </a>
-          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
-            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
-            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
-              Pantalones
-            </div>
-          </a>
-          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
-            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
-            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
-              Vestidos
-            </div>
-          </a>
-          <a href='#' className="w-60 h-60 shadow rounded-xl shrink-0 overflow-hidden mb-3 relative z-10 group">
-            <Image src={'/images/MASCARA-1@2x.png'} width={248} height={248} alt={'Logo'} className={'mb-5 bg-cover w-full h-full transition-all group-hover:scale-110 group-focus:scale-110 group-focus-within:scale-110 group-active:scale-110 duration-300 '} />
-            <div className="w-full text-xl absolute bottom-0 text-center text-VensfolkRegular p-1 bg-shirly-accent-gray group-hover:bg-shirly-primary group-hover:text-white group-focus:bg-shirly-primary group-focus:text-white group-focus-within:bg-shirly-primary group-focus-within:text-white group-active:bg-shirly-primary group-active:text-white transition-all duration-300">
-              Accesorios
-            </div>
-          </a>
+          {categories.map((category, index)=> <CardCategory {...category} key={index} />)}
         </div>
       </div>
 
-        <h2 className='text-VensfolkRegular text-center text-xl lg:text-3xl mb-3'>
+        <h2 className='text-VensfolkRegular text-center text-xl lg:text-[1.75rem] mb-3'>
           ¡Lo que tenemos para ti!
         </h2>
-        <a href="#" className='text-center block underline text-shirly-primary mb-8'>Ver todo</a>
 
-        <h4 className='text-base text-center text-VensfolkRegular mb-3'>
+        <a href="#" className='text-center block underline text-shirly-pink-01 mb-8'>Ver todo</a>
+
+        <h4 className='text-base lg:text-[1.75rem] text-center text-VensfolkRegular leading-[4.8125rem] '>
           Llévate nuestros accesorios con
         </h4>
 
-        <h3 className='text-3xl text-center text-VensfolkRegular mb-5'>
+        <h3 className='xs:text-3xl lg:text-[3.125rem] text-center text-VensfolkRegular leading-10 mb-5'>
           10% de descuento
         </h3>
 
-        <h3 className='text-lg text-center text-VensfolkRegular mb-3'>Comparte tus looks con #saboutique</h3>
-        <p className="text-sm text-center mb-8">
+        <h3 className='text-lg lg:text-[1.75rem] leading-10 text-center text-VensfolkRegular '>Comparte tus looks con #saboutique</h3>
+        <p className="text-sm lg:text-base text-center mb-8">
           Etiqueta en instagram @sa.storemedellin y en tu caption con #saboutique para tener la oportunidad de aparecer.
         </p>
 

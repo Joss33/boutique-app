@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+
 
 
 @font-face {
@@ -20,7 +20,7 @@
 
 html, body{
   font-family: 'Montserrat-Regular';
-  overflow: hidden;
+  // overflow: hidden;
   height: 100%;
 }
 
@@ -31,3 +31,7 @@ strong, .font-bold{
 .text-VensfolkRegular{
   font-family: 'VensfolkRegular';
 }
+
+@import './components/Buttons.scss';
+
+@tailwind utilities;

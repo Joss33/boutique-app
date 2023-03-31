@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default function Footer() {
+export const Footer = () => {
     return (
       <>
         <footer className="bg-shirly-accent-gray-02 px-5 py-8">

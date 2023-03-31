@@ -3,9 +3,13 @@ import Image from "next/image";
 
 //models
 import { Category } from '@/models/category.model';
+import { Product } from '@/models/product.model';
 
 //components
-import CardCategory from "@/components/home/CardCategory";
+import { CardCategory } from "@/components/home/CardCategory";
+import { MainLayout } from '@/components/layout/MainLayout';
+import { CardProduct } from '@/components/home/CardProduct';
+import { Banner } from '@/components/home/Banner';
 
 export default function Home() {
 
@@ -13,25 +17,109 @@ export default function Home() {
     {
       id: '1',
       name: 'Blusas',
-      image: '/images/MASCARA-1@2x.png',
+      image: '/images/MASCARA-4@2x.png',
       link: '#'
     },
     {
       id: '2',
       name: 'Pantalones',
-      image: '/images/MASCARA-1@2x.png',
+      image: '/images/MASCARA-4@2x.png',
       link: '#'
     },
     {
       id: '3',
       name: 'Vestidos',
-      image: '/images/MASCARA-1@2x.png',
+      image: '/images/MASCARA-4@2x.png',
       link: '#'
     },
     {
       id: '4',
       name: 'Accesorios',
-      image: '/images/MASCARA-1@2x.png',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+  ]
+
+  const products: Product[] = [
+    {
+      id: '1',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+    {
+      id: '2',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+    {
+      id: '3',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+    {
+      id: '4',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+    {
+      id: '5',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+    {
+      id: '6',
+      name: 'Top Rosa look',
+      image: '/images/MASCARA-4@2x.png',
+      price: '$ 100.000',
+      link: '#',
+      colors: [0xfff]
+    },
+  ]
+
+  const galery: Omit<Product, 'name' | 'price' | 'colors'>[] = [
+    {
+      id: '1',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+    {
+      id: '2',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+    {
+      id: '3',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+    {
+      id: '4',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+    {
+      id: '5',
+      image: '/images/MASCARA-4@2x.png',
+      link: '#'
+    },
+    {
+      id: '6',
+      image: '/images/MASCARA-4@2x.png',
       link: '#'
     },
   ]
@@ -44,57 +132,50 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='h-full'>
-
-      <div className="overflow-hidden mb-9 mt-4">
-        <div className="flex lg:justify-center items-center gap-4 pl-5 overflow-auto">
-          {categories.map((category, index)=> <CardCategory {...category} key={index} />)}
-        </div>
-      </div>
-
-        <h2 className='text-VensfolkRegular text-center text-xl lg:text-[1.75rem] mb-3'>
-          ¡Lo que tenemos para ti!
-        </h2>
-
-        <a href="#" className='text-center block underline text-shirly-pink-01 mb-8'>Ver todo</a>
-
-        <h4 className='text-base lg:text-[1.75rem] text-center text-VensfolkRegular leading-[4.8125rem] '>
-          Llévate nuestros accesorios con
-        </h4>
-
-        <h3 className='xs:text-3xl lg:text-[3.125rem] text-center text-VensfolkRegular leading-10 mb-5'>
-          10% de descuento
-        </h3>
-
-        <h3 className='text-lg lg:text-[1.75rem] leading-10 text-center text-VensfolkRegular '>Comparte tus looks con #saboutique</h3>
-        <p className="text-sm lg:text-base text-center mb-8">
-          Etiqueta en instagram @sa.storemedellin y en tu caption con #saboutique para tener la oportunidad de aparecer.
-        </p>
-
-        <div className="overflow-hidden mb-3">
-          <div className="flex lg:justify-center items-center gap-4 pl-5 mb-12 overflow-auto">
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+      <MainLayout>
+          <div className="bg-shirly-accent-gray-02">
+            <Image src={'/images/BANNER WEB@2x.png'} width={1280} height={200} layout={"responsive"} alt={'Banner Web'} className={'w-full h-auto mb-12'} />
+            <div className="overflow-hidden max-w-[65rem] mx-auto mb-9">
+              <div className="flex items-center gap-4 pl-5 lg:p-0 overflow-auto">
+                {categories.map((category, index)=> <CardCategory {...category} key={index} />)}
+              </div>
             </div>
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
-            </div>
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
-            </div>
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
-            </div>
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
-            </div>
-            <div className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
-              <Image src={'/images/MASCARA-1@2x.png'} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+
+            <h2 className='text-VensfolkRegular text-center text-xl lg:text-[1.75rem] mb-3'>
+              ¡Lo que tenemos para ti!
+            </h2>
+
+            <a href='#' className='text-center block underline text-shirly-pink-01 mb-8'>Ver todo</a>
+
+            <div className="grid grid-cols-2 lg:grid-cols-3 px-5 lg:px-0 justify-center gap-x-4 max-w-[65rem] mx-auto">
+              {
+                products.map((product)=>(
+                  <CardProduct {...product} key={product.id} />
+                ))
+              }
             </div>
           </div>
-        </div>
 
-      </main>
+          <Banner/>
+
+          <h3 className='text-lg lg:text-[1.75rem] leading-10 text-center text-VensfolkRegular '>Comparte tus looks con #saboutique</h3>
+          <p className="text-sm lg:text-base text-center mb-8">
+            Etiqueta en instagram @sa.storemedellin y en tu caption con #saboutique para tener la oportunidad de aparecer.
+          </p>
+
+          <div className="overflow-hidden mb-3">
+            <div className="flex lg:justify-center items-center gap-4 pl-5 mb-12 overflow-auto">
+              {
+                galery.map((item)=> (
+                  <div key={item.id} className="w-40 h-48 rounded-xl shrink-0 overflow-hidden mb-3">
+                    <Image src={item.image} width={98} height={46} alt={'Logo'} className={'mb-5 w-full h-full'} />
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+      </MainLayout>
     </>
   )
 }

@@ -1,0 +1,11 @@
+@layer components {
+  .btn{
+    @apply max-w-[21.875rem] lg:max-w-[19.75rem] w-full relative overflow-hidden text-base leading-[1.125rem] rounded-[0.625rem] outline-none p-4;
+  }
+  .btn::after{
+    content: '';
+  }
+  .btn.btn-primary{
+    @apply after:absolute after:top-0 after:left-0 after:w-0 after:hover:w-full after:focus:w-full after:focus-within:w-full after:active:w-full after:h-full after:bg-shirly-accent-gray-02 after:border after:border-shirly-primary after:rounded-[0.625rem] after:ease-in-out after:transition-all after:duration-300 bg-shirly-primary  transition duration-300 hover:text-shirly-primary focus:text-shirly-primary focus-within:text-shirly-primary active:text-shirly-primary hover:font-bold focus:font-bold focus-within:font-bold active:font-bold text-shirly-accent-gray-02;
+  }
+}
